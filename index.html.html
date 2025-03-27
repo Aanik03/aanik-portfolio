@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aanik Naushad Hamid | Finance Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f7fa;
+      color: #222;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?fit=crop&w=1350&q=80') center/cover no-repeat;
+      color: #fff;
+      text-align: center;
+      padding: 4em 2em;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.3em;
+    }
+    header p {
+      font-size: 1.2em;
+    }
+    nav {
+      background: #111;
+      padding: 1em;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #4fc3f7;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2em 1em;
+    }
+    .about {
+      display: flex;
+      gap: 2em;
+      align-items: center;
+      flex-wrap: wrap;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .about img {
+      width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      margin-top: 1em;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+    .skills .skill {
+      display: flex;
+      align-items: center;
+      background: #e0e0e0;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.95em;
+      gap: 8px;
+    }
+    .skills img {
+      height: 20px;
+      width: 20px;
+    }
+    footer {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 2em;
+    }
+    .timeline {
+      border-left: 4px solid #444;
+      margin-left: 20px;
+      padding-left: 20px;
+    }
+    .timeline-item {
+      margin-bottom: 2em;
+    }
+    @media (max-width: 768px) {
+      header h1 { font-size: 2em; }
+      .about { flex-direction: column; text-align: center; }
+      .about img { width: 140px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Aanik Naushad Hamid</h1>
+    <p>Senior Corporate Accountant | Financial Analyst</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="container">
+    <h2>About Me</h2>
+    <div class="about">
+      <img src="profile.jpg" alt="Aanik Profile" />
+      <p>
+        I’m a finance professional with experience in financial planning, reporting, and analytics across top-tier firms like RBC, Auto Trader, and Canadian Tire.
+        With deep knowledge of accounting systems and tools, I help businesses make data-driven decisions.
+        <br><br>
+        <a href="mailto:Aanik904@gmail.com">Download Resume</a>
+      </p>
+    </div>
+  </section>
+
+  <section id="experience" class="container">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <strong>Auto Trader</strong> - Senior Corporate Accountant (Feb 2025 – Present)
+      </div>
+      <div class="timeline-item">
+        <strong>Canadian Tire</strong> - Financial Analyst (Sept 2024 – Feb 2025)
+      </div>
+      <div class="timeline-item">
+        <strong>RBC</strong> - Financial Analyst (Jun 2023 – Aug 2024)
+      </div>
+      <div class="timeline-item">
+        <strong>RBC</strong> - Financial Planning Associate (Oct 2022 – Jun 2023)
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/732/732220.png" alt="Excel"> Excel</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Power BI"> Power BI</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="SAP"> SAP</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/753/753244.png" alt="Oracle"> Oracle</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/867/867218.png" alt="PeopleSoft"> PeopleSoft</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="CPA"> CPA Ontario</div>
+      <div class="skill"><img src="https://cdn-icons-png.flaticon.com/512/942/942787.png" alt="CFA"> CFA Level 2</div>
+    </div>
+  </section>
+
+  <section id="contact" class="container">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:Aanik904@gmail.com">Aanik904@gmail.com</a></p>
+    <p>Phone: (437)-234-2127</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Aanik Naushad Hamid</p>
+  </footer>
+
+</body>
+</html>
