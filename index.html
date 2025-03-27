@@ -7,30 +7,31 @@
   <title>Aanik Naushad Hamid | Finance Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f6f1e7;
-      color: #111;
+      background-color: #f3f3f3;
+      color: #1b1b1b;
       line-height: 1.6;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1521790797524-b2497295b8a0?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+      background: url('https://images.unsplash.com/photo-1565373675527-95c00343a7ed?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 6em 2em 4em;
+      animation: fadeIn 1.2s ease-in-out;
     }
     header h1 {
       font-size: 3em;
       margin-bottom: 0.2em;
-      text-shadow: 1px 1px 2px black;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
     }
     header p {
       font-size: 1.3em;
-      color: #ddd;
+      color: #e0e0e0;
     }
     nav {
-      background: #111;
+      background: #101820;
       text-align: center;
       padding: 1em;
       position: sticky;
@@ -38,13 +39,14 @@
       z-index: 999;
     }
     nav a {
-      color: #fff;
+      color: #ffffff;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
     nav a:hover {
-      color: #c2a97d;
+      color: #ffc857;
     }
     .container {
       max-width: 1000px;
@@ -52,14 +54,15 @@
       padding: 3em 1em;
     }
     .about {
-      background-color: #fff;
+      background-color: #ffffff;
       border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
       text-align: center;
       padding: 2em 1em;
+      animation: slideUp 1s ease-in-out;
     }
     .avatar {
-      border: 5px solid #c2a97d;
+      border: 5px solid #ffc857;
       border-radius: 12px;
       overflow: hidden;
       width: 180px;
@@ -77,9 +80,10 @@
       gap: 1em;
       margin-top: 2em;
       justify-content: center;
+      animation: fadeIn 1.5s ease-in-out;
     }
     .skills .skill {
-      background: #111;
+      background: #101820;
       color: #fff;
       padding: 10px 16px;
       border-radius: 6px;
@@ -96,19 +100,21 @@
       filter: grayscale(0%);
     }
     .timeline {
-      border-left: 3px solid #111;
+      border-left: 3px solid #101820;
       padding-left: 20px;
       margin-top: 2em;
+      animation: slideUp 1.2s ease-in-out;
     }
     .timeline-item {
       margin-bottom: 1.5em;
     }
     .cta {
-      background-color: #111;
+      background-color: #101820;
       color: #fff;
       text-align: center;
       padding: 3em 2em;
       margin-top: 4em;
+      animation: fadeIn 2s ease-in-out;
     }
     .cta h2 {
       font-size: 2em;
@@ -119,17 +125,17 @@
     }
     .cta a {
       padding: 0.8em 2em;
-      background-color: #c2a97d;
+      background-color: #ffc857;
       color: #000;
       text-decoration: none;
       font-weight: bold;
       border-radius: 30px;
     }
     .cta a:hover {
-      background-color: #b29566;
+      background-color: #e5b84d;
     }
     footer {
-      background: #000;
+      background: #1b1b1b;
       text-align: center;
       padding: 2em;
       color: #aaa;
@@ -137,6 +143,14 @@
     @media (max-width: 768px) {
       .avatar { width: 140px; height: 180px; }
       .logos img { height: 40px; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
