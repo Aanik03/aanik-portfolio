@@ -85,9 +85,11 @@
       border-radius: 6px;
     }
     .logos img {
-      height: 40px;
+      height: 50px;
+      max-width: 150px;
+      object-fit: contain;
       filter: grayscale(100%);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, filter 0.3s ease;
     }
     .logos img:hover {
       transform: scale(1.1);
@@ -134,7 +136,7 @@
     }
     @media (max-width: 768px) {
       .avatar { width: 140px; height: 180px; }
-      .logos img { height: 30px; }
+      .logos img { height: 40px; }
     }
   </style>
 </head>
@@ -173,10 +175,10 @@
       <div class="timeline-item"><strong>RBC</strong> - Financial Analyst (Jun 2023 – Aug 2024)</div>
       <div class="timeline-item"><strong>RBC</strong> - Financial Planning Associate (Oct 2022 – Jun 2023)</div>
     </div>
-    <div class="logos" style="margin-top: 2em;">
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/b/bd/AutoTrader_logo.svg/2560px-AutoTrader_logo.svg.png" alt="AutoTrader" />
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/Canadian_Tire_logo_2022.svg/2560px-Canadian_Tire_logo_2022.svg.png" alt="Canadian Tire" />
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/84/Royal_Bank_of_Canada_logo.svg/2560px-Royal_Bank_of_Canada_logo.svg.png" alt="RBC" />
+    <div class="logos">
+      <img src="autotrader_logo.png" alt="AutoTrader Logo" />
+      <img src="canadian_tire_logo.png" alt="Canadian Tire Logo" />
+      <img src="rbc_logo.png" alt="RBC Logo" />
     </div>
   </section>
 
