@@ -5,45 +5,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aanik Naushad Hamid | Finance Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f3f3f3;
-      color: #1b1b1b;
+      background-color: #f7f8f9;
+      color: #1a1a1a;
       line-height: 1.6;
     }
     header {
-      background: url('https://images.unsplash.com/photo-1565373675527-95c00343a7ed?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(to right, #0f2027, #203a43, #2c5364);
       color: white;
       text-align: center;
-      padding: 6em 2em 4em;
-      animation: fadeIn 1.2s ease-in-out;
+      padding: 8em 2em 6em;
     }
     header h1 {
       font-size: 3em;
-      margin-bottom: 0.2em;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+      margin-bottom: 0.5em;
     }
     header p {
       font-size: 1.3em;
+      margin-bottom: 1em;
       color: #e0e0e0;
     }
+    .hero-btns a {
+      display: inline-block;
+      margin: 0 10px;
+      padding: 0.75em 1.5em;
+      background: #ffc857;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 30px;
+    }
     nav {
-      background: #101820;
+      background: #1a1a1a;
       text-align: center;
       padding: 1em;
       position: sticky;
       top: 0;
-      z-index: 999;
+      z-index: 1000;
     }
     nav a {
-      color: #ffffff;
+      color: #fff;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
-      transition: color 0.3s ease;
     }
     nav a:hover {
       color: #ffc857;
@@ -53,103 +61,99 @@
       margin: auto;
       padding: 3em 1em;
     }
-    .about {
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    .section-title {
       text-align: center;
-      padding: 2em 1em;
-      animation: slideUp 1s ease-in-out;
+      margin-bottom: 2em;
     }
     .avatar {
+      width: 180px;
+      height: 240px;
+      margin: 0 auto 1em;
       border: 5px solid #ffc857;
       border-radius: 12px;
       overflow: hidden;
-      width: 180px;
-      height: 240px;
-      margin: 0 auto 1.5em;
     }
     .avatar img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    .skills, .logos {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1em;
-      margin-top: 2em;
-      justify-content: center;
-      animation: fadeIn 1.5s ease-in-out;
+    .about {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 2em;
+      text-align: center;
+      animation: fadeIn 1.5s ease-in;
     }
-    .skills .skill {
-      background: #101820;
-      color: #fff;
-      padding: 10px 16px;
-      border-radius: 6px;
+    .experience {
+      animation: fadeIn 1.5s ease-in;
+    }
+    .timeline-item {
+      margin-bottom: 2em;
+    }
+    .logos {
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      margin-top: 1em;
+      flex-wrap: wrap;
     }
     .logos img {
       height: 50px;
-      max-width: 150px;
-      object-fit: contain;
       filter: grayscale(100%);
-      transition: transform 0.3s ease, filter 0.3s ease;
+      transition: all 0.3s ease;
     }
     .logos img:hover {
-      transform: scale(1.1);
       filter: grayscale(0%);
+      transform: scale(1.1);
     }
-    .timeline {
-      border-left: 3px solid #101820;
-      padding-left: 20px;
-      margin-top: 2em;
-      animation: slideUp 1.2s ease-in-out;
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5em;
+      animation: fadeIn 1.5s ease-in;
     }
-    .timeline-item {
-      margin-bottom: 1.5em;
+    .skill-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1em;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
     .cta {
-      background-color: #101820;
-      color: #fff;
       text-align: center;
+      background: #1a1a1a;
+      color: #fff;
       padding: 3em 2em;
       margin-top: 4em;
-      animation: fadeIn 2s ease-in-out;
     }
     .cta h2 {
       font-size: 2em;
       margin-bottom: 0.5em;
     }
     .cta p {
-      margin-bottom: 1em;
+      margin-bottom: 1.5em;
+      color: #ccc;
     }
     .cta a {
-      padding: 0.8em 2em;
-      background-color: #ffc857;
+      margin: 0 10px;
+      display: inline-block;
+      padding: 0.8em 1.6em;
+      background: #ffc857;
       color: #000;
       text-decoration: none;
-      font-weight: bold;
       border-radius: 30px;
-    }
-    .cta a:hover {
-      background-color: #e5b84d;
+      font-weight: bold;
     }
     footer {
-      background: #1b1b1b;
       text-align: center;
+      background: #111;
+      color: #999;
       padding: 2em;
-      color: #aaa;
-    }
-    @media (max-width: 768px) {
-      .avatar { width: 140px; height: 180px; }
-      .logos img { height: 40px; }
+      font-size: 0.9em;
     }
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes slideUp {
-      from { opacity: 0; transform: translateY(30px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
   </style>
@@ -158,7 +162,12 @@
 
   <header>
     <h1>Aanik Naushad Hamid</h1>
-    <p>Senior Corporate Accountant | Financial Analyst</p>
+    <p>Turning Numbers Into Strategy — From Ledger to Leadership.</p>
+    <div class="hero-btns">
+      <a href="#contact">Let’s Connect</a>
+      <a href="resume.pdf" download>Download Resume</a>
+      <a href="mailto:Aanik904@gmail.com">Book a Call</a>
+    </div>
   </header>
 
   <nav>
@@ -169,53 +178,57 @@
   </nav>
 
   <section id="about" class="container">
-    <h2>About Me</h2>
+    <div class="section-title"><h2>About Me</h2></div>
     <div class="about">
-      <div class="avatar">
-        <img src="profile.jpg" alt="Aanik Profile" />
-      </div>
+      <div class="avatar"><img src="profile.jpg" alt="Aanik Hamid" /></div>
       <p>
-        I’m a finance professional with experience in financial planning, reporting, and analytics across top-tier firms like RBC, Auto Trader, and Canadian Tire.
-        With deep knowledge of accounting systems and tools, I help businesses make data-driven decisions.
+        I’m a finance and accounting professional passionate about helping organizations navigate their numbers with clarity and confidence.
+        With experience at RBC, Canadian Tire, and Auto Trader, I specialize in turning complex financial data into actionable insights.
+        My background in corporate accounting, budgeting, and analytics empowers me to deliver value beyond the balance sheet.
+        Whether it's streamlining reporting or supporting decision-making, I bring strategic thinking and a detail-driven mindset to every opportunity.
       </p>
     </div>
   </section>
 
   <section id="experience" class="container">
-    <h2>Experience</h2>
-    <div class="timeline">
-      <div class="timeline-item"><strong>Auto Trader</strong> - Senior Corporate Accountant (Feb 2025 – Present)</div>
-      <div class="timeline-item"><strong>Canadian Tire</strong> - Financial Analyst (Sept 2024 – Feb 2025)</div>
-      <div class="timeline-item"><strong>RBC</strong> - Financial Analyst (Jun 2023 – Aug 2024)</div>
-      <div class="timeline-item"><strong>RBC</strong> - Financial Planning Associate (Oct 2022 – Jun 2023)</div>
-    </div>
-    <div class="logos">
-      <img src="autotrader_logo.png" alt="AutoTrader Logo" />
-      <img src="canadian_tire_logo.png" alt="Canadian Tire Logo" />
-      <img src="rbc_logo.png" alt="RBC Logo" />
+    <div class="section-title"><h2>Experience</h2></div>
+    <div class="experience">
+      <div class="timeline-item"><strong>Auto Trader</strong> – Sr. Corporate Accountant (Feb 2025 – Present)</div>
+      <div class="timeline-item"><strong>Canadian Tire</strong> – Financial Analyst (Sept 2024 – Feb 2025)</div>
+      <div class="timeline-item"><strong>RBC</strong> – Financial Analyst (Jun 2023 – Aug 2024)</div>
+      <div class="timeline-item"><strong>RBC</strong> – Financial Planning Associate (Oct 2022 – Jun 2023)</div>
+      <div class="logos">
+        <img src="autotrader_logo.png" alt="AutoTrader" />
+        <img src="canadian_tire_logo.png" alt="Canadian Tire" />
+        <img src="rbc_logo.png" alt="RBC" />
+      </div>
     </div>
   </section>
 
   <section id="skills" class="container">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">Excel</div>
-      <div class="skill">Power BI</div>
-      <div class="skill">SAP</div>
-      <div class="skill">Oracle</div>
-      <div class="skill">PeopleSoft</div>
-      <div class="skill">CPA Ontario</div>
-      <div class="skill">CFA Level 2</div>
+    <div class="section-title"><h2>Skills & Services</h2></div>
+    <div class="skills-grid">
+      <div class="skill-card">Excel & Advanced Reporting</div>
+      <div class="skill-card">Power BI / Data Visualization</div>
+      <div class="skill-card">SAP, Oracle, PeopleSoft</div>
+      <div class="skill-card">CPA Ontario | CFA Level 2</div>
+      <div class="skill-card">Budget Planning & Forecasting</div>
+      <div class="skill-card">Financial Analysis & Strategy</div>
+      <div class="skill-card">Cross-functional Collaboration</div>
+      <div class="skill-card">Problem Solving & Accuracy</div>
     </div>
   </section>
 
   <section id="contact" class="cta">
     <h2>Let’s Work Together</h2>
-    <p>If you're looking for a results-driven financial partner, I’m ready to help.</p>
-    <a href="mailto:Aanik904@gmail.com">Contact Me</a>
+    <p>Open to full-time opportunities, freelance collaborations, and consulting. Let’s connect and make impact happen.</p>
+    <a href="mailto:Aanik904@gmail.com">Email Me</a>
+    <a href="resume.pdf" download>Download Resume</a>
+    <a href="mailto:Aanik904@gmail.com">Book a Call</a>
   </section>
 
   <footer>
+    <p>Connect with me: <a href="https://www.linkedin.com/in/aanik-hamid-csc-1b4892155" target="_blank">LinkedIn</a> | <a href="https://aanik03.github.io/aanik-portfolio/" target="_blank">GitHub</a></p>
     <p>&copy; 2025 Aanik Naushad Hamid</p>
   </footer>
 
