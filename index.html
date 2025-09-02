@@ -1,166 +1,145 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aanik Naushad Hamid | Finance Portfolio</title>
+
+  <!-- SEO / Preview -->
+  <meta name="description" content="Aanik N. Hamid — Senior finance professional turning numbers into strategy. IFRS/GAAP reporting, FP&A, Excel/Power BI." />
+  <meta property="og:title" content="Aanik N. Hamid — Portfolio" />
+  <meta property="og:description" content="From ledger to leadership: reporting, FP&A, dashboards." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="preview.jpg" />
+  <meta name="theme-color" content="#4361ee" />
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
   <style>
+    /* ============ Base ============ */
     * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+    :root{
+      --bg:#0d1321; --ink:#e6e9ef; --muted:#a5adbb;
+      --brand:#4cc9f0; --brand-2:#4361ee; --accent:#ffc857;
+      --card:#111827; --ring:#93c5fd; --light:#f7f8f9; --ink-dark:#1a1a1a;
+    }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #f7f8f9;
-      color: #1a1a1a;
+      background-color: var(--light);
+      color: var(--ink-dark);
       line-height: 1.6;
     }
-    header {
-      background: url('https://www.transparenttextures.com/patterns/cubes.png'), linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    .container { max-width: 1000px; margin: auto; padding: 3em 1em; }
+    .section-title { text-align: center; margin-bottom: 2em; }
+
+    /* ============ Header / Hero (upgraded) ============ */
+    header{
+      position: relative;
       color: white;
       text-align: center;
       padding: 8em 2em 6em;
-    }
-    header h1 {
-      font-size: 3em;
-      margin-bottom: 0.5em;
-    }
-    header p {
-      font-size: 1.3em;
-      margin-bottom: 1em;
-      color: #e0e0e0;
-    }
-    .hero-btns a {
-      display: inline-block;
-      margin: 0 10px;
-      padding: 0.75em 1.5em;
-      background: #ffc857;
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 30px;
-    }
-    nav {
-      background: #1a1a1a;
-      text-align: center;
-      padding: 1em;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #ffc857;
-    }
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 3em 1em;
-    }
-    .section-title {
-      text-align: center;
-      margin-bottom: 2em;
-    }
-    .avatar {
-      width: 180px;
-      height: 240px;
-      margin: 0 auto 1em;
-      border: 5px solid #ffc857;
-      border-radius: 12px;
+      background:
+        radial-gradient(1200px 600px at 80% -10%, rgba(76,201,240,.18), transparent),
+        linear-gradient(160deg,#0d1321 0%, #0b132b 50%, #172554 100%);
       overflow: hidden;
     }
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    /* subtle animated grid for "trust/finance" feel */
+    header::before{
+      content:""; position:absolute; inset:0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.06) 1px, transparent 1px);
+      background-size: 60px 60px, 60px 60px;
+      animation: gridPulse 12s linear infinite;
+      mask-image: radial-gradient(80% 60% at 50% 40%, black, transparent);
+      pointer-events:none;
     }
+    @keyframes gridPulse { 0%{opacity:.25; transform:scale(1)} 50%{opacity:.4; transform:scale(1.02)} 100%{opacity:.25; transform:scale(1)} }
+
+    header h1 { font-size: 3em; margin-bottom: 0.5em; }
+    header p { font-size: 1.3em; margin-bottom: 1em; color: #e0e0e0; }
+    .eyebrow{letter-spacing:.2em; text-transform:uppercase; color:var(--brand); font-weight:600; margin-bottom:.75rem}
+
+    .hero-btns a {
+      display: inline-block; margin: 0 10px; padding: 0.75em 1.5em;
+      background: linear-gradient(90deg, var(--brand-2), var(--brand));
+      color: #fff; text-decoration: none; font-weight: bold; border-radius: 14px;
+      box-shadow: 0 12px 28px rgba(67,97,238,.25);
+      transition: transform .15s ease, box-shadow .15s ease, opacity .15s;
+    }
+    .hero-btns a:hover{ transform: translateY(-2px); opacity:.95 }
+
+    /* ============ Nav + Theme toggle ============ */
+    nav {
+      background: #1a1a1a; text-align: center; padding: 1em; position: sticky; top: 0; z-index: 1000;
+      display:flex; gap:1rem; justify-content:center; align-items:center;
+    }
+    nav a { color: #fff; margin: 0 6px; text-decoration: none; font-weight: bold; }
+    nav a:hover { color: var(--accent); }
+    #themeToggle{
+      border:1px solid rgba(255,255,255,.25);
+      background: transparent; color:#fff; padding:.5em .8em; border-radius:10px; cursor:pointer;
+    }
+
+    /* ============ About ============ */
     .about {
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-      padding: 2em;
-      text-align: center;
-      animation: fadeIn 1.5s ease-in;
+      background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      padding: 2em; text-align: center; animation: fadeIn 1.2s ease-in;
     }
-    .experience {
-      animation: fadeIn 1.5s ease-in;
-    }
-    .timeline-item {
-      margin-bottom: 2em;
-    }
-    .logos {
-      display: flex;
-      justify-content: center;
-      gap: 2em;
-      margin-top: 1em;
-      flex-wrap: wrap;
-    }
+    .avatar { width: 180px; height: 240px; margin: 0 auto 1em; border: 5px solid var(--accent); border-radius: 12px; overflow: hidden; }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* ============ Experience ============ */
+    .experience { animation: fadeIn 1.2s ease-in; }
+    .timeline-item { margin-bottom: 2em; }
+
+    /* ============ Logos (enhanced hover) ============ */
+    .logos { display: flex; justify-content: center; gap: 2em; margin-top: 1em; flex-wrap: wrap; }
     .logos img {
-      height: 50px;
-      filter: grayscale(100%);
-      transition: all 0.3s ease;
+      height: 50px; filter: grayscale(1) brightness(.9); opacity:.85;
+      transition: transform .2s ease, filter .2s ease, opacity .2s ease;
     }
-    .logos img:hover {
-      filter: grayscale(0%);
-      transform: scale(1.1);
-    }
+    .logos img:hover { filter: grayscale(0); opacity:1; transform: translateY(-2px); }
+
+    /* ============ Skills ============ */
     .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5em;
-      animation: fadeIn 1.5s ease-in;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5em; animation: fadeIn 1.2s ease-in;
     }
-    .skill-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 1em;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
+    .skill-card { background: #fff; border-radius: 10px; padding: 1em; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+
+    /* ============ CTA ============ */
     .cta {
-      text-align: center;
-      background: #1a1a1a;
-      color: #fff;
-      padding: 3em 2em;
-      margin-top: 4em;
+      text-align: center; background: #1a1a1a; color: #fff; padding: 3em 2em; margin-top: 4em;
+      border-top:1px solid rgba(255,255,255,.1);
     }
-    .cta h2 {
-      font-size: 2em;
-      margin-bottom: 0.5em;
-    }
-    .cta p {
-      margin-bottom: 1.5em;
-      color: #ccc;
-    }
+    .cta h2 { font-size: 2em; margin-bottom: 0.5em; }
+    .cta p { margin-bottom: 1.5em; color: #ccc; }
     .cta a {
-      margin: 0 10px;
-      display: inline-block;
-      padding: 0.8em 1.6em;
-      background: #ffc857;
-      color: #000;
-      text-decoration: none;
-      border-radius: 30px;
-      font-weight: bold;
+      margin: 0 10px; display: inline-block; padding: 0.8em 1.6em;
+      background: var(--accent); color: #000; text-decoration: none; border-radius: 14px; font-weight: bold;
     }
-    footer {
-      text-align: center;
-      background: #111;
-      color: #999;
-      padding: 2em;
-      font-size: 0.9em;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+
+    /* ============ Footer ============ */
+    footer { text-align: center; background: #111; color: #999; padding: 2em; font-size: 0.9em; }
+    footer a { color:#cbd5ff; }
+
+    /* ============ Reveal Animations (no library) ============ */
+    [data-reveal]{ opacity:0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+    .in{ opacity:1; transform:none; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ============ Dark Mode ============ */
+    .dark body{ background: var(--bg); color: var(--ink); }
+    .dark .about, .dark .skill-card { background:#0f1626; color:var(--ink); border:1px solid rgba(255,255,255,.06); }
+    .dark .container p{ color:var(--ink); }
+    .dark .cta{ background:#0b1220; }
   </style>
 </head>
 <body>
 
   <header>
+    <p class="eyebrow">Finance • Accounting • FP&A</p>
     <h1>Aanik Naushad Hamid</h1>
     <p>Turning Numbers Into Strategy — From Ledger to Leadership.</p>
     <div class="hero-btns">
@@ -175,9 +154,10 @@
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
+    <button id="themeToggle" aria-label="Toggle theme">🌓</button>
   </nav>
 
-  <section id="about" class="container">
+  <section id="about" class="container" data-reveal>
     <div class="section-title"><h2>About Me</h2></div>
     <div class="about">
       <div class="avatar"><img src="profile.jpg" alt="Aanik Hamid" /></div>
@@ -190,14 +170,14 @@
     </div>
   </section>
 
-  <section id="experience" class="container">
+  <section id="experience" class="container" data-reveal>
     <div class="section-title"><h2>Experience</h2></div>
     <div class="experience">
       <div class="timeline-item"><strong>Auto Trader</strong> – Sr. Corporate Accountant (Feb 2025 – Present)</div>
       <div class="timeline-item"><strong>Canadian Tire</strong> – Financial Analyst (Sept 2024 – Feb 2025)</div>
       <div class="timeline-item"><strong>RBC</strong> – Financial Analyst (Jun 2023 – Aug 2024)</div>
       <div class="timeline-item"><strong>RBC</strong> – Financial Planning Associate (Oct 2022 – Jun 2023)</div>
-      <div class="logos">
+      <div class="logos" aria-label="Companies I've worked with">
         <img src="autotrader_logo.png" alt="AutoTrader" />
         <img src="canadian_tire_logo.png" alt="Canadian Tire" />
         <img src="rbc_logo.png" alt="RBC" />
@@ -205,7 +185,7 @@
     </div>
   </section>
 
-  <section id="skills" class="container">
+  <section id="skills" class="container" data-reveal>
     <div class="section-title"><h2>Skills & Services</h2></div>
     <div class="skills-grid">
       <div class="skill-card">Excel & Advanced Reporting</div>
@@ -219,7 +199,7 @@
     </div>
   </section>
 
-  <section id="contact" class="cta">
+  <section id="contact" class="cta" data-reveal>
     <h2>Let’s Work Together</h2>
     <p>Open to full-time opportunities, freelance collaborations, and consulting. Let’s connect and make impact happen.</p>
     <a href="mailto:Aanik904@gmail.com">Email Me</a>
@@ -228,9 +208,30 @@
   </section>
 
   <footer>
-    <p>Connect with me: <a href="https://www.linkedin.com/in/aanik-hamid-csc-1b4892155" target="_blank">LinkedIn</a> | <a href="https://aanik03.github.io/aanik-portfolio/" target="_blank">GitHub</a></p>
+    <p>Connect with me: <a href="https://www.linkedin.com/in/aanik-hamid-csc-1b4892155" target="_blank" rel="noopener">LinkedIn</a> | <a href="https://aanik03.github.io/aanik-portfolio/" target="_blank" rel="noopener">GitHub</a></p>
     <p>&copy; 2025 Aanik Naushad Hamid</p>
   </footer>
 
+  <!-- Reveal on scroll (no library) -->
+  <script>
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    },{threshold:.12});
+    document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
+  </script>
+
+  <!-- Dark mode toggle -->
+  <script>
+    const root = document.documentElement;
+    const THEME_KEY='pref-theme';
+    const saved = localStorage.getItem(THEME_KEY);
+    if(saved==='dark'){ root.classList.add('dark'); }
+    document.getElementById('themeToggle')?.addEventListener('click',()=>{
+      root.classList.toggle('dark');
+      localStorage.setItem(THEME_KEY, root.classList.contains('dark')?'dark':'light');
+    });
+  </script>
 </body>
 </html>
